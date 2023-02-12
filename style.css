@@ -183,7 +183,7 @@ section#playerBoard{
       border: 2px outset;
     }
     input:focus{
-      border: 2px inset;
+      border: 2px inset #AF2413;
     }
   button#playGame{
     align-self: flex-end;
