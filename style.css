@@ -117,16 +117,17 @@ h1#gameInfo{
   h1 box-icon.left{
     position: relative;
     top: 65px;
-    left: -112px;
+    left: -150px;
   }
   h1 box-icon.right{
     position: relative;
     top: 65px;
-    right: -112px;
+    right: -150px;
   }
 section#playerBoard{
   font-family: 'Neuropolitical';
-  min-width: 412px;
+  min-width: fit-content;
+  width: fit-content;
   max-width: 412px;
   height: fit-content;
   display: flex;
@@ -137,6 +138,7 @@ section#playerBoard{
   padding: 0 2.5rem 0 2.5rem;
   transition: all 1.5s ease;
   display: none;
+  gap: 3rem;
 }
   section#playerBoard.show{
     display: flex;
@@ -145,6 +147,8 @@ section#playerBoard{
     top: 429px;
   }
   label{
+    display: block;
+    width: 140px;
     text-align: center;
     font-family: 'Joystix';
   }
