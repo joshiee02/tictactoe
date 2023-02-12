@@ -45,7 +45,7 @@ table {
 
 @font-face {
   font-family: 'Joystix';
-  src: url(../font/joystix\ monospace.otf);
+  src: url(./font/joystixmonospace.otf);
 }
 body{
   background-color: #F5F5F5;
@@ -117,16 +117,17 @@ h1#gameInfo{
   h1 box-icon.left{
     position: relative;
     top: 65px;
-    left: -112px;
+    left: -119px;
   }
   h1 box-icon.right{
     position: relative;
     top: 65px;
-    right: -112px;
+    right: -119px;
   }
 section#playerBoard{
   font-family: 'Neuropolitical';
-  min-width: 412px;
+  min-width: fit-content;
+  width: fit-content;
   max-width: 412px;
   height: fit-content;
   display: flex;
@@ -134,9 +135,9 @@ section#playerBoard{
   align-items: center;
   position: absolute;
   top: 200px;
-  padding: 0 2.5rem 0 2.5rem;
   transition: all 1.5s ease;
   display: none;
+  gap: 1rem;
 }
   section#playerBoard.show{
     display: flex;
@@ -145,6 +146,9 @@ section#playerBoard{
     top: 429px;
   }
   label{
+    display: block;
+    min-width: 140px;
+    max-width: 140px;
     text-align: center;
     font-family: 'Joystix';
   }
@@ -183,7 +187,7 @@ section#playerBoard{
       border: 2px outset;
     }
     input:focus{
-      border: 2px inset;
+      border: 2px inset #AF2413;
     }
   button#playGame{
     align-self: flex-end;
