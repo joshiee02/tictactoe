@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="game">
+    <section id="startGame" class="active">
+      <h1>TicTacToe</h1>
+      <button id="startButton">Let's Play!</button>
+    </section>
+    <h1 id="gameInfo">
+      <box-icon class="left" name='chevrons-down' animation='fade-down' ></box-icon>
+    </h1>
+    <section id="playerBoard">
+      <div>
+        <label for="player1">
+          <p id="player1Name">Player 1</p>
+          <div class = 'inactive' id="player1Score">0</div>
+          <input type="text" id="player1" maxlength="10" class="playerInput" required>
+        </label>
+      </div>
+      <div id="round">
+        <p>Round</p>
+        <div id='roundScore'>1</div>
+      </div>
+      <div>
+        <label for="player2">
+          <p id="player2Name">Player 2</p>
+          <div class ='inactive' id="player2Score">0</div>
+          <input type="text" id="player2" maxlength="10" class="playerInput">
+        </label>
+      </div>
+      <button id="playGame">Enter</button>
+    </section>
+    <section id="gameBoard">
+      <div data-first='0' data-second='0' class="grids"></div>
+      <div data-first='0' data-second='1' class="grids"></div>
+      <div data-first='0' data-second='2' class="grids"></div>
+      <div data-first='1' data-second='0' class="grids"></div>
+      <div data-first='1' data-second='1' class="grids"></div>
+      <div data-first='1' data-second='2' class="grids"></div>
+      <div data-first='2' data-second='0' class="grids"></div>
+      <div data-first='2' data-second='1' class="grids"></div>
+      <div data-first='2' data-second='2' class="grids"></div>
+    </section>
+    <button id="resetButton">Reset Game<box-icon name='refresh' ></box-icon></button>
+  </div>
+</body>
+</html>

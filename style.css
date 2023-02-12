@@ -1,0 +1,279 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+  font-family: 'Neuropolitical';
+  src: url(/font/neuropolitical\ rg.otf);
+}
+@font-face {
+  font-family: 'Joystix';
+  src: url(/font/joystix\ monospace.otf);
+}
+body{
+  background-color: #F5F5F5;
+}
+div#game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  min-width: 412px;
+  width: 412px;
+  min-height: 100vh;
+}
+section#startGame {
+  color: #5D3891;
+  min-width: 412px;
+  height:fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+  top: 40px;
+  font-family: 'Joystix';
+  transition: all 1.5s ease;
+}
+  section#startGame.active{
+    top: 410px;
+  }
+  section#startGame> h1{
+    font-size: 3.5rem;
+    text-shadow: 0.2rem 0.2rem #F99417;
+
+  }
+  button#startButton{
+    color: black;
+    font-family: 'Joystix';
+    font-size: 0.8rem;
+    width: 133px;
+    background-color: #E8E2E2;
+    border: 2px outset;
+    border-top-color: #5D3891;
+    border-right-color: #5D3891;
+    border-bottom-color: #F99417;
+    border-left-color: #F99417;
+  }
+  button#startButton:active{
+    border: 2px inset;
+    border-top-color: #5D3891;
+    border-right-color: #5D3891;
+    border-bottom-color: #F99417;
+    border-left-color: #F99417;
+  }
+  .inactive{
+    display: none;
+  }
+
+h1#gameInfo{
+  display: none;
+}
+  h1#gameInfo.active{
+    display: block;
+  }
+  h1 box-icon{
+    width: 3rem;
+    height: fit-content;
+  }
+  h1 box-icon.left{
+    position: relative;
+    top: 65px;
+    left: -112px;
+  }
+  h1 box-icon.right{
+    position: relative;
+    top: 65px;
+    right: -112px;
+  }
+section#playerBoard{
+  font-family: 'Neuropolitical';
+  min-width: 412px;
+  max-width: 412px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 200px;
+  padding: 0 2.5rem 0 2.5rem;
+  transition: all 1.5s ease;
+  display: none;
+}
+  section#playerBoard.show{
+    display: flex;
+  }
+  section#playerBoard.active{
+    top: 429px;
+  }
+  label{
+    text-align: center;
+    font-family: 'Joystix';
+  }
+    #player1Name{
+      color: #5D3891;
+    }
+    #player2Name{
+      color: #F99417;
+    }
+    #player1Score, #player2Score{
+      font-size: 3.5rem;
+      margin-top: 0.5rem;
+    }
+    #round{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      font-family: 'Joystix';
+    }
+    #round.active{
+      display: flex;
+    }
+    #round > div{
+      padding-top: 0.5rem;
+      font-size: 1rem;
+      font-family: 'Joystix';
+    }
+    input{
+      margin-top: 0.5rem;
+      width: 7rem;
+      font-family: 'Joystix';
+      font-size: 12px;
+      padding: 0.25rem 0.5rem;
+      text-align: center;
+      border: 2px outset;
+    }
+    input:focus{
+      border: 2px inset;
+    }
+  button#playGame{
+    align-self: flex-end;
+    height: 30px;
+    font-size: 0.6rem;
+    font-family: 'Joystix';
+    border: 2px outset;
+    border-top-color: #5D3891;
+    border-right-color: #5D3891;
+    border-bottom-color: #F99417;
+    border-left-color: #F99417;
+    color: black;
+    background-color: #E8E2E2;
+  }
+  button#playGame:active{
+    border: 2px inset;
+    border-top-color: #5D3891;
+    border-right-color: #5D3891;
+    border-bottom-color: #F99417;
+    border-left-color: #F99417;
+  }
+
+section#gameBoard{
+    min-width: 412px;
+    max-width: 412px;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    display: none;
+    top: 355px;
+    
+}
+  section#gameBoard.active{
+    display: flex;
+  }
+  div.grids{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    background-color: #E8E2E2;
+    border: 3px outset #F5F5F5;
+    width: calc(412px/3);
+    height: calc(466.5px/3);
+  }
+    div.grids:active{
+      background-color: #E8E2E2;
+      border: 3px inset #F5F5F5;
+    }
+    #X::after{
+      font-family: 'JoyStix';
+      content: 'X';
+      color: #F99417;
+      text-shadow: 2px 2px #5D3891;
+    }
+    #O::before{
+      font-family: 'JoyStix';
+      content: 'O';
+      color: #5D3891;
+      text-shadow: 2px 2px #F99417;
+    }
+button#resetButton{
+  color: black;
+  font-family: 'JoyStix';
+  position: relative;
+  left: auto;
+  top: 715px;
+  width: fit-content;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  display: none;
+  border: 2px outset;
+  border-top-color: #5D3891;
+  border-right-color: #5D3891;
+  border-bottom-color: #F99417;
+  border-left-color: #F99417;
+  background-color: #E8E2E2;
+}
+  button#resetButton.active{
+    display: flex;
+  }
+  button#resetButton.active:active{
+    border: 2px inset;
+    border-top-color: #5D3891;
+    border-right-color: #5D3891;
+    border-bottom-color: #F99417;
+    border-left-color: #F99417;
+  }
